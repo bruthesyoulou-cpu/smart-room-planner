@@ -1,0 +1,11 @@
+{
+  "extends": "@srp/config/tsconfig.react.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": { "@/*": ["./src/*"] }
+  },
+  "include": ["src", "vite-env.d.ts"],
+  "references": [{ "path": "../../packages/types" }]
+}
