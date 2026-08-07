@@ -1,0 +1,25 @@
+{
+  "name": "smart-room-planner",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Smart Room Planner — Extension de navigateur et application web pour la gestion hôtelière",
+  "scripts": {
+    "dev:web": "turbo run dev --filter=@srp/web",
+    "dev:api": "turbo run dev --filter=@srp/api",
+    "dev": "turbo run dev",
+    "build:web": "turbo run build --filter=@srp/web",
+    "build:api": "turbo run build --filter=@srp/api",
+    "build:extension": "turbo run build --filter=@srp/extension",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.0",
+    "typescript": "^5.6.0"
+  },
+  "packageManager": "pnpm@9.12.0",
+  "engines": {
+    "node": ">=20"
+  }
+}
