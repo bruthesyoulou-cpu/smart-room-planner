@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Room Planner</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 380px;
+      min-height: 320px;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      font-size: 13px;
+    }
+    .container { padding: 16px; }
+    h2 { font-size: 15px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .alert { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px; }
+    .alert-icon { font-size: 18px; flex-shrink: 0; }
+    .alert-body p:first-child { font-weight: 600; margin-bottom: 2px; }
+    .alert-body p:last-child { color: #94a3b8; font-size: 11px; }
+    .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+    .stat { background: #1e293b; border-radius: 8px; padding: 10px; text-align: center; }
+    .stat-value { font-size: 20px; font-weight: 700; }
+    .stat-label { font-size: 10px; color: #94a3b8; margin-top: 2px; }
+    .btn-dashboard {
+      display: block; width: 100%; padding: 10px; border: none; border-radius: 10px;
+      background: #3b82f6; color: white; font-size: 13px; font-weight: 600; cursor: pointer;
+      text-align: center; text-decoration: none; margin-top: 8px;
+    }
+    .btn-dashboard:hover { background: #2563eb; }
+    .critical { border-left: 3px solid #ef4444; }
+    .warning { border-left: 3px solid #eab308; }
+    .info { border-left: 3px solid #3b82f6; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🏨 Smart Room Planner</h2>
+
+    <div class="stat-row">
+      <div class="stat">
+        <div class="stat-value" style="color:#22c55e">78%</div>
+        <div class="stat-label">Occupation</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" style="color:#3b82f6">12</div>
+        <div class="stat-label">Arrivées</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" style="color:#f97316">8</div>
+        <div class="stat-label">Départs</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" style="color:#8b5cf6">5</div>
+        <div class="stat-label">À nettoyer</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="alert critical">
+        <span class="alert-icon">🔔</span>
+        <div class="alert-body">
+          <p>Check-in imminent</p>
+          <p>Chambre 103 · Fatou Diallo · 14:00</p>
+        </div>
+      </div>
+      <div class="alert warning">
+        <span class="alert-icon">⚠️</span>
+        <div class="alert-body">
+          <p>Réservation non assignée</p>
+          <p>Aminata Ba · Aucune chambre</p>
+        </div>
+      </div>
+      <div class="alert info">
+        <span class="alert-icon">🧹</span>
+        <div class="alert-body">
+          <p>Chambre à nettoyer</p>
+          <p>105, 205, 305 · Priorité haute</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="http://localhost:3000" target="_blank" class="btn-dashboard">
+      Ouvrir le dashboard →
+    </a>
+  </div>
+</body>
+</html>

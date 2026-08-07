@@ -20,7 +20,6 @@ export default function Timeline() {
 
       <div className="overflow-x-auto">
         <div className="min-w-[700px]">
-          {/* Header - days */}
           <div className="grid" style={{ gridTemplateColumns: `120px repeat(${cols}, 1fr)` }}>
             <div className="text-xs text-gray-500 py-1">Chambre</div>
             {timelineDays.map((d, i) => (
@@ -30,7 +29,6 @@ export default function Timeline() {
             ))}
           </div>
 
-          {/* Rows - rooms */}
           {mockRooms.map(room => {
             const slots = roomReservations[room.id] ?? [];
             return (
